@@ -8,8 +8,9 @@ const authRoutes = require("./routes/auth");
 const imageFetch = require("./routes/imagesFetch");
 const contact = require("./routes/contact");
 // database connection
+mongoose.set('strictQuery', true);
 connection();
-mongoose.set('strictQuery', false);
+
 // middlewares
 app.use(express.json());
 app.use(cors());
