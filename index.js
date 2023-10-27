@@ -9,7 +9,7 @@ const imageFetch = require("./routes/imagesFetch");
 const contact = require("./routes/contact");
 // database connection
 connection();
-
+mongoose.set('strictQuery', false);
 // middlewares
 app.use(express.json());
 app.use(cors());
